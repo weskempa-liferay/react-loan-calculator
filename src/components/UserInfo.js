@@ -34,12 +34,12 @@ function UserInfo(props) {
                   value={props.store.loanAmount} />
             </Box>
             <Box sx={{ p: 2 }}>
-                <TextField label="Loan Amount" 
+                <TextField label="Remaining Term" 
                     fullWidth disabled variant="outlined"
                     value={props.store.remainingTerm} />
             </Box>
             <Box sx={{ p: 2 }}>
-                <TextField label="Loan Amount" 
+                <TextField label="Interest Rate" 
                     fullWidth disabled variant="outlined"
                     value={props.store.interestRate} />
             </Box>

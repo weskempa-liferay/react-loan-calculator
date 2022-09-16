@@ -55,7 +55,6 @@ function App(){
     dispatch({ type: 'RESET' });
   };
 
-
   function getStepContent(step) {
       switch (step) {
         case 0:
