@@ -4,7 +4,11 @@ import { Grid, Box, Paper, Typography, TextField, Select, Button, MenuItem, Form
 import Amortization from './Amortization';
 import LiferayApi from '../common/services/liferay/api';
 
+import {useIntl} from 'react-intl';
+
 function LoanDetail(props) {
+
+    const intl = useIntl();
 
     useEffect(() => {
         if(!props.store.initialized){
@@ -73,18 +77,18 @@ function LoanDetail(props) {
             <Paper>
                 <Box sx={{ p: 2 }}>
                     <Typography variant="h5" gutterBottom>
-                        Loan Details
+                        {intl.formatMessage({id: 'loan-details'})}
                     </Typography>
                 </Box>
                 <Box sx={{ p: 2 }}>
-                    <TextField label="Loan Amount" 
+                    <TextField label={intl.formatMessage({id: 'loan-amount'})}
                         fullWidth variant="outlined"
                         onChange={handleLoanAmountChange}
                         value={props.store.loanAmount} />
                 </Box>
                 <Box sx={{ p: 2 }}>
                     <FormControl fullWidth>
-                        <InputLabel id="remaining-term-label">Remaining Term</InputLabel>
+                        <InputLabel id="remaining-term-label">{intl.formatMessage({id: 'remaining-term'})}</InputLabel>
                         <Select
                             fullWidth  variant="standard"
                             labelId="remaining-term-label"
@@ -98,13 +102,13 @@ function LoanDetail(props) {
                     </FormControl>
                 </Box>
                 <Box sx={{ p: 2 }}>
-                    <TextField label="Interest Rate" disabled fullWidth  
+                    <TextField label={intl.formatMessage({id: 'interest-rate'})} disabled fullWidth  
                         variant="standard" value={props.store.interestRate}/>
                 </Box>
                 <Box sx={{ p: 2 }}>
                     <Button fullWidth onClick={props.handleNext}
                         variant="contained" color="primary">
-                        Next
+                        {intl.formatMessage({id: 'next'})}
                     </Button>
                 </Box>
             </Paper>

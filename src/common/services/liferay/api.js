@@ -7,12 +7,11 @@ export const getLiferayAuthenticationToken = () => {
 
 		return token;
 	} catch (error) {
-		//console.warn('Not able to find Liferay auth token\n', error);
+		console.warn('Not able to find Liferay auth token\n', error);
 
 		return '';
 	}
 };
-
 const baseFetch = async (url, {body, method = 'GET'} = {}) => {
 
     let headers = new Headers({

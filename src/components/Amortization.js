@@ -3,6 +3,8 @@ import { DataGrid } from '@mui/x-data-grid';
 
 import { Box, Paper, Typography } from '@material-ui/core';
 
+import {useIntl} from 'react-intl';
+
 function fixedFloat(nbr, toFixed = 2) {
   return parseFloat(nbr.toFixed(toFixed));
 }
@@ -17,21 +19,18 @@ function calculateRepaymentAmount(a, n, i) {
 function Amortization(props) {
   const { loanAmount, remainingTerm, interestRate } = props.store;
 
-  console.log("loanAmount:"+loanAmount);
-  console.log("remainingTerm:"+remainingTerm);
-  console.log("interestRate:"+interestRate);
+  const intl = useIntl();
 
   if (!loanAmount || !remainingTerm || !interestRate) {
     return (<Paper>
       <Box sx={{ p: 2 }}>
         <Typography variant="h5" gutterBottom>
-          Loan Repayment Schedule
+          {intl.formatMessage({id: 'loan-repayment-schedule'})}
         </Typography>
       </Box>
     </Paper>);
   }
 
-  const rows = Math.ceil(remainingTerm * 12);
   const repaymentAmount = fixedFloat(
     calculateRepaymentAmount(
       loanAmount,
@@ -39,13 +38,13 @@ function Amortization(props) {
       interestRate / 100 / 12
     )
   );
-  
+
   const columns = [
     { field: 'id', headerName: '#', type: 'number', width: 30 },
-    { field: 'balance', headerName: 'Balance', type: 'number', width: 130 },
-    { field: 'monthlyRepayment', headerName: 'Monthly', type: 'number', width: 130 },
-    { field: 'principal', headerName: 'Principal', type: 'number', width: 130 },
-    { field: 'interest', headerName: 'Interest', type: 'number', width: 130 }
+    { field: 'balance', headerName: intl.formatMessage({id: 'balance'}), type: 'number', width: 130 },
+    { field: 'monthlyRepayment', headerName: intl.formatMessage({id: 'monthly'}), type: 'number', width: 130 },
+    { field: 'principal', headerName: intl.formatMessage({id: 'principal'}), type: 'number', width: 130 },
+    { field: 'interest', headerName: intl.formatMessage({id: 'interest'}), type: 'number', width: 130 }
   ];
   
   const rowData = [];
@@ -74,7 +73,7 @@ function Amortization(props) {
     <Paper>
       <Box sx={{ p: 2 }}>
         <Typography variant="h5" gutterBottom>
-          Loan Repayment Schedule
+          {intl.formatMessage({id: 'loan-repayment-schedule'})}
         </Typography>
       </Box>
       <Box sx={{ p: 2 }}>

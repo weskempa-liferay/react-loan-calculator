@@ -1,8 +1,12 @@
 import React from 'react';
 
-import { Grid, Box, Paper, Typography, TextField, Select, Button, MenuItem, FormControl, InputLabel } from '@material-ui/core';
+import { Grid, Box, Paper, Typography, TextField, Button } from '@material-ui/core';
+
+import {useIntl} from 'react-intl';
 
 function UserInfo(props) {
+
+  const intl = useIntl();
 
   function handleFirstNameChange(event) {
     let value = event.target.value
@@ -25,28 +29,28 @@ function UserInfo(props) {
         <Paper>
             <Box sx={{ p: 2 }}>
               <Typography variant="h5" gutterBottom>
-                  Loan Details in Review
+                  {intl.formatMessage({id: 'in-review'})}
               </Typography>
             </Box>
             <Box sx={{ p: 2 }}>
-              <TextField label="Loan Amount" 
+              <TextField label={intl.formatMessage({id: 'loan-amount'})} 
                   fullWidth disabled variant="outlined"
                   value={props.store.loanAmount} />
             </Box>
             <Box sx={{ p: 2 }}>
-                <TextField label="Remaining Term" 
+                <TextField label={intl.formatMessage({id: 'remaining-term'})} 
                     fullWidth disabled variant="outlined"
                     value={props.store.remainingTerm} />
             </Box>
             <Box sx={{ p: 2 }}>
-                <TextField label="Interest Rate" 
+                <TextField label={intl.formatMessage({id: 'interest-rate'})}
                     fullWidth disabled variant="outlined"
                     value={props.store.interestRate} />
             </Box>
             <Box sx={{ p: 2 }}>
               <Button fullWidth onClick={props.handleBack}
                   variant="contained" color="primary">
-                  Previous
+                  {intl.formatMessage({id: 'previous'})}
               </Button>
             </Box>
         </Paper>
@@ -55,23 +59,23 @@ function UserInfo(props) {
         <Paper>
             <Box sx={{ p: 2 }}>
               <Typography variant="h5" gutterBottom>
-                  Your Contact Inforamtion
+                {intl.formatMessage({id: 'your-contact-information'})}
               </Typography>
             </Box>
             <Box sx={{ p: 2 }}>
-              <TextField label="First Name" 
+              <TextField label={intl.formatMessage({id: 'first-name'})}
                   fullWidth variant="outlined"
                   onChange={handleFirstNameChange}
                   value={props.store.firstName} />
             </Box>
             <Box sx={{ p: 2 }}>
-                <TextField label="Last Name" 
+                <TextField label={intl.formatMessage({id: 'last-name'})} 
                     fullWidth variant="outlined"
                     onChange={handleLastNameChange}
                     value={props.store.lastName} />
             </Box>
             <Box sx={{ p: 2 }}>
-                <TextField label="Email Address" 
+                <TextField label={intl.formatMessage({id: 'email-address'})}
                     fullWidth variant="outlined"
                     onChange={handleEmailChange}
                     value={props.store.emailAddress} />
@@ -79,7 +83,7 @@ function UserInfo(props) {
             <Box sx={{ p: 2 }}>
               <Button fullWidth onClick={props.completeRequest}
                   variant="contained" color="primary">
-                  Submit Loan Request
+                  {intl.formatMessage({id: 'submit-loan-request'})}
               </Button>
             </Box>
         </Paper>
