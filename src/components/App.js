@@ -11,12 +11,20 @@ import useStore from '../useStore';
 
 import LiferayApi from '../common/services/liferay/api';
 
+import {useIntl} from 'react-intl';
+
 function App(){
+
+  const intl = useIntl();
 
   const [store, dispatch] = useStore();
   const [activeStep, setActiveStep] = useState(0);
 
-  const steps = ['Loan Details', 'Contact Information', 'Review']
+  const steps = [
+      intl.formatMessage({id: 'loan-details'}),
+      intl.formatMessage({id: 'contact-information'}),
+      intl.formatMessage({id: 'review'})
+    ];
 
   function postRequest(){
       LiferayApi("o/c/loanrequests/", {
