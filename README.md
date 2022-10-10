@@ -7,6 +7,8 @@ Example of a multi-step react component that leverages getting and posting Lifer
 
 ![Component Outcomes 1](./screenshots/img-1.png)
 
+![Component Outcomes 2](./screenshots/img-2.png)
+
 ### Expected Use
 This resource can be used as a 7.4 Remote App (Custom Element) or a Client Extension service for LXC.
 
@@ -104,66 +106,26 @@ Save, then this application will be available in your widgets list.
 4. Create a new Remote App with the following field details.
     * *Note 1: Use the (+) icon for adding additional URL values.* 
 
-| Field             |  Value                                                                   |
-| :---              | :---                                                                     |
-| Name              | React Bar Chart                                                          |
-| Type              | Custom Element                                                           |
-| HTML Element Name | react-headless-chart                                                     |
-| URL 1             | http://localhost:3000/static/js/main.chunk.js                            |
-| URL 2 (+)         | http://localhost:3000/static/js/vendors~main.chunk.js                    |
-| URL 3 (+)         | http://localhost:3000/static/js/bundle.js                                |
+| Field             |  Value                                                |
+| :---              | :---                                                  |
+| Name              | React Bar Chart                                       |
+| Type              | Custom Element                                        |
+| HTML Element Name | react-headless-chart                                  |
+| URL 1             | http://localhost:3000/static/js/main.[RANDOM ID].js   |
+| CSS               | http://localhost:3000/static/css/main.[RANDOM ID].css |
  
 Save, then this application will be available in your widgets list.
  
 <img src="./assets/RemoteApp-Config-Option-1.png" alt="drawing" width="500"/>
-  
-### [Option 2] Resources Hosted in Tomcat Webapps
 
-   *NOTE: Choose this method when you are working on a live server that you have control over (such as DXPC), but you do not have access to run a separate live react server.*
-  
-1. Within your React App, run a build using 'yarn run build'
-    
-2. The resulting files will be seen within your react project within a folder named /build/
-  
-3. Note the files packages in the build log, they should appear similar to this:
-    
-```
-File sizes after gzip:
-
-509.77 KB (-133 B)  build/static/js/2.f86fd244.chunk.js
-1.39 KB (+1 B)      build/static/js/main.c7b9ace8.chunk.js
-787 B               build/static/js/runtime-main.1ad6e658.js
-132 B               build/static/css/main.26c647c1.chunk.css
-```
-
-4. Place the build folder within your Liferay webapps/ folder and rename the build folder react-bar-chart/ or similar.
-
-5. Then, navigate to Remote Apps within Liferay's control panel.
-    
-6. Create a new Remote App with the following field details. 
-    * *Note 1: Reference the build names from step 3.*
-    * *Note 2: Use the (+) icon for adding additional URL values.* 
-    * *Note 3: The build file names change with every build. Remember to keep them up to date when future builds are made.* 
-
-| Field             |  Value                                              |
-| :---              | :---                                                |
-| Name              | React Bar Chart                                     |
-| Type              | Custom Element                                      |
-| HTML Element Name | loan-calculator                                     |
-| URL 1             | /react-bar-chart/static/js/2.f86fd244.chunk.js      |
-| URL 2 (+)         | /react-bar-chart/static/js/main.c7b9ace8.chunk.js   |
-| URL 3 (+)         | /react-bar-chart/static/js/runtime-main.1ad6e658.js |
-| CSS               | /react-bar-chart/static/css/main.26c647c1.chunk.css |
- 
-Save, then this application will be available in your widgets list.
- 
-<img src="./assets/RemoteApp-Config-Option-2.png" alt="drawing" width="500"/>
-
-### [Option 3] Javascript Resources Added to Document Library
+### [Option 2] Javascript Resources Added to Document Library
 
    *NOTE: Choose this method when you are working on a live server that you DO NOT have file system control over (LOL/SaaS/Site or Portal Administrator) and you do not have access to run a separate live react server.* 
 
 Similar to Option 2, however once the files are created they are added to the Liferay Document Library (or any public online resource - Google Drive, etc) and hosted using Resource URLs. 
 
-![Component Outcomes 2](./screenshots/img-2.png)
+### [Option 3] LXC Client Extension Service
+
+   * Details coming soon.
+
 ![Component Outcomes 3](./screenshots/img-3.png)
