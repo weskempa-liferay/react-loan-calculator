@@ -70,10 +70,10 @@ So many ways to use Remote Apps!! *Yey!*
 
   * Delivery Method A - Remote App's Custom Element
   
-     * [Option 1] Javascript Resources Hosted on Remote Server (webapps)
-     * [Option 2] Javascript Resources Added to Document Library
-     * [Option 3] LXC Client Extension Service
-  
+     * [Option 1] Javascript Resources Hosted on Remote Server or LXC Client Extension Service
+     * [Option 2] Javascript Resources Hosted on Liferay Server in webapps
+     * [Option 3] Javascript Resources Added to Document Library
+     
   * Delivery Method B - Use as separate React App (Make sure to set the CORs Policy to support this approach if on a separate domain) 
   * Delivery Method C - Remote App's iFrame 
 
