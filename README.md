@@ -37,15 +37,17 @@ This resource can be used as a 7.4 Remote App (Custom Element) or a Client Exten
     | 6.75   | 30        |
     | 6.25   | 15        |
     | 5.75   | 10        |
+    
+5. Set the permissions for each Rate to allow Guest users to view each record. This can be done from the preferences option in the menu by each Rate in the rate list. 
 
-5. Create a second Object named:
+6. Create a second Object named:
 
     * Label: "Loan Request"
     * Pural Label: "Loan Requests"
     * Object Name: "LoanRequest"
     * Note: This object represents the incoming loan requests that are sent from this component.
 
-6. Object Needs the Fields
+7. Object Needs the Fields
 
     | Field          |  Type       | Required  |
     | :---           |   :----:    |  :----:   |
@@ -56,7 +58,7 @@ This resource can be used as a 7.4 Remote App (Custom Element) or a Client Exten
     | Last Name      | Text        | No        |
     | Email Address  | Text        | No        |
 
-6. Publish the new Loan Request Object
+8. Publish the new Loan Request Object
 
 
 ## Clone Repo and Install Packages
