@@ -111,12 +111,10 @@ Save, then this application will be available in your widgets list.
 | Name              | React Bar Chart                                       |
 | Type              | Custom Element                                        |
 | HTML Element Name | react-headless-chart                                  |
-| URL 1             | http://localhost:3000/static/js/main.[RANDOM ID].js   |
-| CSS               | http://localhost:3000/static/css/main.[RANDOM ID].css |
+| URL 1             | http://localhost:3000/static/js/main.[RANDOM-ID].js   |
+| CSS               | http://localhost:3000/static/css/main.[RANDOM-ID].css |
  
 Save, then this application will be available in your widgets list.
- 
-<img src="./assets/RemoteApp-Config-Option-1.png" alt="drawing" width="500"/>
 
 ### [Option 2] Javascript Resources Added to Document Library
 
