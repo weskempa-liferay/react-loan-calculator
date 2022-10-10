@@ -68,11 +68,13 @@ yarn install
 
 So many ways to use Remote Apps!! *Yey!*
 
-  * Display Method A - Use as separate React App
-  * Display Method B - Remote App's iFrame 
-  * Display Method C - Remote App's Custom Element
+  * Delivery Method A - Remote App's Custom Element
+  
      * [Option 1] Javascript Resources Hosted on Remote Server (webapps)
      * [Option 2] Javascript Resources Added to Document Library
      * [Option 3] LXC Client Extension Service
+  
+  * Delivery Method B - Use as separate React App (Make sure to set the CORs Policy to support this approach if on a separate domain) 
+  * Delivery Method C - Remote App's iFrame 
 
 ![Component Outcomes 3](./screenshots/img-3.png)
