@@ -64,8 +64,6 @@ Clone repo and once ready run the following:
 
 yarn install
 
-<img src="./assets/Component-Outcomes.png" alt="drawing" width="500"/>
-
 # Display Method Options
 
 So many ways to use Remote Apps!! *Yey!*
