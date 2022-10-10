@@ -3,7 +3,7 @@
 [![Deploy to
 Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/weskempa-liferay/react-loan-calculator)
 
-Example of a multi-step react component that leverages getting and posting Liferay Object data. This component also contains translated content for French, Portugese, Spanish, and English based on the user's Liferay language settings.
+Example of a multi-step react component that leverages getting and posting Liferay Object data. This component also contains translated content for French, Portuguese, Spanish, and English based on the user's Liferay language settings.
 
 ![Component Outcomes 1](./screenshots/img-1.png)
 
