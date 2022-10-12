@@ -90,6 +90,6 @@ Include these in your Remote App or LXC Client Extension Service definition.
      
      
   * Delivery Method B - Use as separate React App (Make sure to set the CORs Policy to support this approach if on a separate domain) 
-  * Delivery Method C - Remote App's iFrame 
+  * Delivery Method C - Remote App's iFrame (Make sure to set the CORs Policy to support this approach if on a separate domain)
 
 ![Component Outcomes 3](./screenshots/img-3.png)
