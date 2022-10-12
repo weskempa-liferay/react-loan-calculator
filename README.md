@@ -82,11 +82,12 @@ So many ways to use Remote Apps!! *Yey!*
 
 Include these in your Remote App or LXC Client Extension Service definition. 
 
-    | Field               |  Value           |
-    | :---                | :----            |
-    | HTML Element Name   | loan-calculator  |
-    | urls                | path to main.js  |
-    | cssURLs             | path to main.css |
+| Field               | Value            |
+| :---                | :----            |
+| HTML Element Name   | loan-calculator  |
+| urls                | path to main.js  |
+| cssURLs             | path to main.css |
+     
      
   * Delivery Method B - Use as separate React App (Make sure to set the CORs Policy to support this approach if on a separate domain) 
   * Delivery Method C - Remote App's iFrame 
