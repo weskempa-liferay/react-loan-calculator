@@ -1,4 +1,4 @@
-# React Loan Calculator
+# React Loan Calculator and Form Submission
 
 [![Deploy to
 Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/weskempa-liferay/react-loan-calculator)
