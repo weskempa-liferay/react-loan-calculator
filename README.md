@@ -27,7 +27,7 @@ This resource can be used as a 7.4 Remote App (Custom Element) or a Client Exten
 
     | Field  |  Type     | Required  |
     | :---   |   :----:  |  :----:   |
-    | Rate   | Decimal   | No        |
+    | Rate   | Decimal   | Yes       |
     | Term   | Integer   | Yes       |
 
 3. Publish the new Rate Object
