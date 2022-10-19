@@ -12,8 +12,6 @@ import common_es from "./translations/es/common.json";
 import common_fr from "./translations/fr/common.json";
 import common_pt from "./translations/pt/common.json";
 
-import LiferayApi from './common/services/liferay/api';
-
 const languageFiles = {
   "en":common_en,
   "es":common_es,
