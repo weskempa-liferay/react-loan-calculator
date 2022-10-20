@@ -53,9 +53,9 @@ This resource can be used as a 7.4 Remote App (Custom Element) or a Client Exten
 
     | Field          |  Type       | Required  |
     | :---           |   :----:    |  :----:   |
-    | Loan Request   | LongInteger | No        |
-    | Interest Rate  | Decimal     | No        |
-    | Remaining Term | Integer     | No        |
+    | Amount         | LongInteger | No        |
+    | Rate           | Decimal     | No        |
+    | Term           | Integer     | No        |
     | First Name     | Text        | No        |
     | Last Name      | Text        | No        |
     | Email Address  | Text        | No        |
